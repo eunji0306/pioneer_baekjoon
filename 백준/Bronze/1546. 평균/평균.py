@@ -1,12 +1,9 @@
-#백준 1546
+#1546
 n=int(input())
-a=list(map(int, input().split()))
-sum=0
+score=list(map(int, input().split()))
+max_score=max(score)
 
-M=max(a)
-a.sort()
 for i in range(n):
-    a[i] = a[i]/M*100
-    sum+=a[i]
-result=sum/n
-print(result)
+    score[i]=score[i]/max_score*100
+
+print(sum(score)/n)
